@@ -17,23 +17,23 @@ public class HouseController {
 	@Autowired
 	HouseRepository houseRepository;
 
-	@GetMapping("/houses")
+	@GetMapping("/house")
 	public List<House> getAllHouses() {
 		return houseRepository.findAll();
 	}
 
-	@PostMapping("/houses")
+	@PostMapping("/house")
 	public House createHouse(@Valid @RequestBody House house) {
 		return houseRepository.save(house);
 	}
 
-	@GetMapping("/houses/{id}")
+	@GetMapping("/house/{id}")
 	public House getHouseById(@PathVariable(value = "id") Long houseId) {
 		return houseRepository.findById(houseId)
 				.orElseThrow(() -> new ResourceNotFoundException("House", "id", houseId));
 	}
 
-	@PutMapping("/houses/{id}")
+	@PutMapping("/house/{id}")
 	public House updateHouse(@PathVariable(value = "id") Long houseId,
 							 @Valid @RequestBody House houseDetails) {
 
@@ -41,12 +41,13 @@ public class HouseController {
 				.orElseThrow(() -> new ResourceNotFoundException("House", "id", houseId));
 
 		house.setAdress(houseDetails.getAdress());
+		house.setFlats(houseDetails.getFlats());
 
 		House updatedHouse = houseRepository.save(house);
 		return updatedHouse;
 	}
 
-	@DeleteMapping("/houses/{id}")
+	@DeleteMapping("/house/{id}")
 	public ResponseEntity<?> deleteHouse(@PathVariable(value = "id") Long houseId) {
 		House house = houseRepository.findById(houseId)
 				.orElseThrow(() -> new ResourceNotFoundException("House", "id", houseId));

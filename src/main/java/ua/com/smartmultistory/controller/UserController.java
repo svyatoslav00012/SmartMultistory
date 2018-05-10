@@ -17,23 +17,23 @@ public class UserController {
 	@Autowired
 	UserRepository userRepository;
 
-	@GetMapping("/users")
+	@GetMapping("/user")
 	public List<User> getAllUsers() {
 		return userRepository.findAll();
 	}
 
-	@PostMapping("/users")
+	@PostMapping("/user")
 	public User createUser(@Valid @RequestBody User user) {
 		return userRepository.save(user);
 	}
 
-	@GetMapping("/users/{id}")
+	@GetMapping("/user/{id}")
 	public User getUserById(@PathVariable(value = "id") Long userId) {
 		return userRepository.findById(userId)
 				.orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
 	}
 
-	@PutMapping("/users/{id}")
+	@PutMapping("/user/{id}")
 	public User updateUser(@PathVariable(value = "id") Long userId,
 						   @Valid @RequestBody User userDetails) {
 
@@ -44,8 +44,8 @@ public class UserController {
 		user.setFirst_name(userDetails.getFirst_name());
 		user.setMiddle_name(userDetails.getMiddle_name());
 		user.setLast_name(userDetails.getLast_name());
-		user.setFlat_id(userDetails.getFlat_id());
-		user.setRole_id(userDetails.getRole_id());
+		user.setFlat(userDetails.getFlat());
+		user.setRole(userDetails.getRole());
 		user.setNumber(userDetails.getNumber());
 		user.setPassword(userDetails.getPassword());
 
@@ -53,7 +53,7 @@ public class UserController {
 		return updatedUser;
 	}
 
-	@DeleteMapping("/users/{id}")
+	@DeleteMapping("/user/{id}")
 	public ResponseEntity<?> deleteUser(@PathVariable(value = "id") Long userId) {
 		User User = userRepository.findById(userId)
 				.orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));

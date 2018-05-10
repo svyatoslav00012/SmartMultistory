@@ -17,23 +17,23 @@ public class RoleController {
 	@Autowired
 	RoleRepository roleRepository;
 
-	@GetMapping("/roles")
+	@GetMapping("/role")
 	public List<Role> getAllRoles() {
 		return roleRepository.findAll();
 	}
 
-	@PostMapping("/roles")
+	@PostMapping("/role")
 	public Role createRole(@Valid @RequestBody Role role) {
 		return roleRepository.save(role);
 	}
 
-	@GetMapping("/roles/{id}")
+	@GetMapping("/role/{id}")
 	public Role getRoleById(@PathVariable(value = "id") Long roleId) {
 		return roleRepository.findById(roleId)
 				.orElseThrow(() -> new ResourceNotFoundException("Role", "id", roleId));
 	}
 
-	@PutMapping("/roles/{id}")
+	@PutMapping("/role/{id}")
 	public Role updateRole(@PathVariable(value = "id") Long roleId,
 						   @Valid @RequestBody Role roleDetails) {
 
@@ -42,12 +42,13 @@ public class RoleController {
 
 		role.setName(roleDetails.getName());
 		role.setPriority(roleDetails.getPriority());
+		role.setUsers(roleDetails.getUsers());
 
 		Role updatedRole = roleRepository.save(role);
 		return updatedRole;
 	}
 
-	@DeleteMapping("/roles/{id}")
+	@DeleteMapping("/role/{id}")
 	public ResponseEntity<?> deleteRole(@PathVariable(value = "id") Long roleId) {
 		Role Role = roleRepository.findById(roleId)
 				.orElseThrow(() -> new ResourceNotFoundException("Role", "id", roleId));

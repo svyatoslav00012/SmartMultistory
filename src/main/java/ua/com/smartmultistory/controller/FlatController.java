@@ -17,23 +17,23 @@ public class FlatController {
 	@Autowired
 	FlatRepository flatRepository;
 
-	@GetMapping("/flats")
+	@GetMapping("/flat")
 	public List<Flat> getAllFlats() {
 		return flatRepository.findAll();
 	}
 
-	@PostMapping("/flats")
+	@PostMapping("/flat")
 	public Flat createFlat(@Valid @RequestBody Flat flat) {
 		return flatRepository.save(flat);
 	}
 
-	@GetMapping("/flats/{id}")
+	@GetMapping("/flat/{id}")
 	public Flat getFlatById(@PathVariable(value = "id") Long flatId) {
 		return flatRepository.findById(flatId)
 				.orElseThrow(() -> new ResourceNotFoundException("Flat", "id", flatId));
 	}
 
-	@PutMapping("/flats/{id}")
+	@PutMapping("/flat/{id}")
 	public Flat updateFlat(@PathVariable(value = "id") Long flatId,
 						   @Valid @RequestBody Flat flatDetails) {
 
@@ -41,12 +41,14 @@ public class FlatController {
 				.orElseThrow(() -> new ResourceNotFoundException("Flat", "id", flatId));
 
 		flat.setNumber(flatDetails.getNumber());
+		flat.setHouse(flatDetails.getHouse());
+		flat.setUsers(flatDetails.getUsers());
 
 		Flat updatedFlat = flatRepository.save(flat);
 		return updatedFlat;
 	}
 
-	@DeleteMapping("/flats/{id}")
+	@DeleteMapping("/flat/{id}")
 	public ResponseEntity<?> deleteFlat(@PathVariable(value = "id") Long flatId) {
 		Flat flat = flatRepository.findById(flatId)
 				.orElseThrow(() -> new ResourceNotFoundException("Flat", "id", flatId));

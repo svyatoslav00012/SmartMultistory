@@ -2,43 +2,61 @@ package ua.com.smartmultistory.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "user")
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(allowGetters = true)
+@Validated
 public class User {
 
 	@Id
-	private int id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 
 	@Column(name = "first_name")
+	@NotNull
 	private String first_name;
 
 	@Column(name = "middle_name")
+	@NotNull
 	private String middle_name;
 
 	@Column(name = "last_name")
+	@NotNull
 	private String last_name;
 
 	@Column(name = "number")
+	@NotNull
+	@Size(min = 14)
 	private String number;
 
-	@Column(name = "flat_id")
-	private int flat_id;
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "flat_id")
+	private Flat flat;
 
-	@Column(name = "role_id")
-	private int role_id;
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "role_id")
+	private Role role;
 
 	@Column(name = "email")
+	@NotNull
+	@Size(min = 3, max = 64)
 	private String email;
 
 	@Column(name = "password")
+	@NotNull
+	@Size(min = 8, max = 64)
 	private String password;
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
@@ -74,22 +92,6 @@ public class User {
 		this.number = number;
 	}
 
-	public int getFlat_id() {
-		return flat_id;
-	}
-
-	public void setFlat_id(int flat_id) {
-		this.flat_id = flat_id;
-	}
-
-	public int getRole_id() {
-		return role_id;
-	}
-
-	public void setRole_id(int role_id) {
-		this.role_id = role_id;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -104,5 +106,21 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+	public Flat getFlat() {
+		return flat;
+	}
+
+	public void setFlat(Flat flat) {
+		this.flat = flat;
 	}
 }
