@@ -51,8 +51,10 @@ of his contact information ( email, phone number, social network page etc.)">
 
             $.get("/api/notes", function (notes) {
                 $.each(notes, function (index, note) {
+
+                    console.log(note);
                     $("#scrl").append("<div class=\"one_board\">"
-                        //  + topic + "\n\n" + content
+                          + note.topic + "<br>" + note.content
                         + "<div class=\"one_board_ener\">"
                         + "<div class=\"one_board_icon\"> </div>"
                         + "</div>"
@@ -60,12 +62,7 @@ of his contact information ( email, phone number, social network page etc.)">
                 });
             });
 
-            $("#scrl").append("<div class=\"one_board\">"
-                //  + topic + "\n\n" + content
-                + "<div class=\"one_board_ener\">"
-                + "<div class=\"one_board_icon\"> </div>"
-                + "</div>"
-                + "</div>");
+
 
         }
 
