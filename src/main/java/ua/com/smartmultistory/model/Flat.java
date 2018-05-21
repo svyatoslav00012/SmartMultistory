@@ -1,5 +1,6 @@
 package ua.com.smartmultistory.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.validation.annotation.Validated;
@@ -24,12 +25,12 @@ public class Flat {
 	private List<User> users;
 
 	@NotNull
-	@Size(max = 14, min = 14)
+	@Size(max = 14, min = 1)
 	@Column(name = "number")
 	private String number;
 
-	@NotNull
 	@ManyToOne
+	@JsonBackReference
 	@JoinColumn(name = "house_id")
 	private House house;
 

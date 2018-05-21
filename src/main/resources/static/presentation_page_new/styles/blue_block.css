@@ -1,0 +1,126 @@
+.blue_background_block{
+	width: 100%;
+	height:  33vw;
+	position: relative;
+	background-color: rgb(214, 230, 253);
+	overflow: hidden;
+}
+
+.blue_icons1{
+	background-image: url("../image/blocks/blue/blue_icons1.png");
+	background-size: cover; 
+	position: absolute;
+	display: inline-block;
+	margin: auto;
+/*	background-color: green;*/
+}
+
+.blue_icons2{
+	background-image: url("../image/blocks/blue/blue_icons2.png");
+	background-size: cover; 
+	position: absolute;
+	display: inline-block;
+	margin: auto;
+/*	background-color: green;*/
+}
+
+/*.blue_underscore1{
+	background-image: url("../image/blocks/blue/blue_underscore1.png");
+	background-size: cover;  
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+
+}
+
+.blue_underscore2{
+	background-image: url("../image/blocks/blue/blue_underscore2.png");
+	background-size: cover;  
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+
+}*/
+
+.blue_frame{
+	position: absolute;
+	background-image: url("../image/blocks/blue/blue_frame.png");
+	background-size: cover;
+}
+
+.blue_emblem{
+	position: absolute;
+	background-image: url("../image/blocks/blue/blue_emblem.png");
+	background-size: cover;
+}
+
+.blue_form{
+	position: absolute;
+	background-image: url("../image/blocks/blue/blue_form.png");
+	background-size: cover;
+}
+
+.blue_lateral_line{
+	background-image: url("../image/blocks/blue/blue_lateral_line.png");
+	background-size: cover; 
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+
+}
+
+
+.blue_icons1_placing{
+	width: 25vw; 
+	height: 15vw;
+	bottom: -1vw;
+	right: 0vw;  
+}
+
+.blue_icons2_placing{
+	width: 25vw; 
+	height: 15vw;
+	top: 0vw;
+	right: -2vw;  
+}
+
+.blue_underscore1_placing{
+	width: 45vw; 
+	height: 10vw;
+	top:3vw;  
+	left:37vw; 
+}
+
+.blue_underscore2_placing{
+	width: 45vw; 
+	height: 15vw;
+	top: 13vw;  
+	left: 37vw; 
+}
+
+.blue_lateral_line_placing{
+	width: 2vw; 
+	height: 33vw; 
+	top:0vw;  
+    left:8vw;
+}
+
+.blue_text_placing{
+	width: 50vw; 
+	height: 6vw; 
+	top: 14.5vw;  
+	left: 37vw; 
+	line-height: 2vw;
+	font-size: 3vw;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0.15vw 1vw rgb(0, 0, 0);
+	position: absolute;
+}
+
+
+.blue_position{
+	width: 20vw;
+	height: 20vw;
+	top:7vw; 
+	left: 15vw;
+}

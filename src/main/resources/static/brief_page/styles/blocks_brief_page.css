@@ -1,0 +1,147 @@
+.icone_board{
+	background-image: url("../images/pink_icons.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}	
+
+
+
+
+
+
+@media only screen and (max-width : 1920px) and (min-width : 800px){
+.icone_board{
+	width: 20vw;
+	height: 20vw;
+	bottom:  0vw;
+	right: 0vw;
+	position: absolute;
+}	
+
+.brief_border{
+	width: 60vw;
+	height: 3vw;
+	top: 4vw;
+	left: 10vw;
+	position: absolute;
+	background-color: rgb(163, 221, 235);
+	box-shadow: 0.03vw 0 0 0.03vw rgb(37, 145, 171);
+}
+
+.first_phrase{
+	font-size: 1.5vw;
+	line-height: 3vw;
+	margin-left: 1vw;
+	color: rgb(91, 124, 132);
+}
+
+.num_ago{
+	width: 1.2vw;
+	height: 1.5vw;
+	position: absolute;
+	top: 0.75vw;
+	left: 8vw;
+	background-color: rgb(91, 124, 132);
+}
+
+.second_phrase{
+	font-size: 1.5vw;
+	line-height: 3vw;
+	margin-left: 1.7vw;
+	color: rgb(91, 124, 132);
+}
+
+
+
+
+
+.data_board{
+	width: 60vw;
+	height: 30vw;
+	top: 7vw;
+	left: 10.05vw;
+	position: absolute;
+	background-color: rgb(215, 243, 250);
+	border: 0.005vw solid rgb(162, 209, 221);
+}
+
+.frame{
+	width: 100%;
+	height: 2.5vw;
+	position: absolute;
+	background-color: rgb(231, 247, 252);
+	border: 0.005vw solid rgb(162, 209, 221);
+}
+
+
+.phrase{
+	font-size: 1.35vw;
+	line-height: 3vw;
+	margin-left: 1vw;
+	color: rgb(91, 124, 132);
+}
+
+
+.button{
+	width: 5.5vw;
+	height: 1.5vw;
+	font-size: 1vw;
+	position: absolute;
+	top: 0.5vw;
+	right: 1.5vw;
+}
+
+
+
+
+
+
+.status_board{
+	width: 29.9vw;
+	height: 3vw;
+	top: 4vw;
+	left: 70.1vw;
+	position: absolute;
+	background-color: rgb(163, 221, 235);
+	box-shadow: 0 0.03vw 0 0.03vw rgb(37, 145, 171);
+}
+
+.text{
+	font-size: 1.5vw;
+	line-height: 3vw;
+	margin-left: 1vw;
+	color: rgb(91, 124, 132);
+}
+
+.status{
+	width: 6vw;
+	height: 1.5vw;
+	position: absolute;
+	top: 0.75vw;
+	left: 5vw;
+	background-color: rgb(91, 124, 132);
+}
+
+}
+
+
+
+
+
+
+@media only screen and (max-width : 800px) and (min-width : 600px){
+.retreat{
+	width: 5vw;
+	height: 2vw;
+	top: 85vw;
+	left: 5vw;
+	position: absolute;
+}
+}
+
+
+
+@media only screen and (max-width : 600px) and (min-width : 176px){
+
+}

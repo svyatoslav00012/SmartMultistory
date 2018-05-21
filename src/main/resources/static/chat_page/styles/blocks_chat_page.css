@@ -1,0 +1,214 @@
+
+
+.icone_board{
+	background-image: url("../images/green_icons.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}	
+
+
+
+
+
+
+@media only screen and (max-width : 1920px) and (min-width : 800px){
+
+.icone_board{
+	width: 35vw;
+	height: 19vw;
+	bottom: 0vw;
+	right: 0vw;
+	position: absolute;
+}	
+
+.chat_block{
+	width: 55vw;
+	height: 90.5vh;
+	top: 4vw;
+	left: 10vw;
+	position: absolute;
+	background-color: rgb(235, 243, 242);
+	border: 0.01vw solid rgb(130 181 183);
+	overflow: hidden;
+}
+
+
+.chat_border{
+	width: 54.9vw;
+	height: 2.5vw;
+	top: 0vw;
+	position: absolute;
+	background-color: rgb(235, 243, 242);
+	box-shadow: 0 0.1vw 0 rgb(213, 221, 220);
+	color: rgb(114, 117, 116);
+	font-size: 1.75vw;
+	text-indent:1vw; 
+	line-height: 2.5vw;
+}
+
+.input_border{
+	width: 54.9vw;
+	height: 3vw;
+	bottom: 0vw;
+	position: absolute;
+	background-color: rgb(235, 243, 242);
+	box-shadow: 0 -0.1vw 0 rgb(213, 221, 220);
+}
+
+.write{
+	border: 0.1vw solid rgb(160, 164, 164);
+	width: 47vw;
+	height: 2vw;
+	margin-top: 0.5vw;
+	margin-left: 1vw;
+
+}
+
+.button{
+	width: 5vw;
+	height: 2vw;
+	top: 0.5vw;
+	right: 1vw;
+}
+
+
+.members_block{
+	width: 35vw;
+	height: 2vw;
+	top:4vw;
+	right: 0vw;
+	position: absolute;
+	background-color: rgb(238, 240, 240);
+	border: 0.1vw solid rgb(160, 164, 164);
+	color: rgb(114, 117, 116);
+	font-size: 1.25vw;
+	text-indent:1vw; 
+	line-height: 2.25vw;
+}
+
+.block{
+	width: 35vw;
+	height: 1.5vw;
+	right: 0vw;
+	position: absolute;
+	background-color: rgb(199, 220, 218);
+	border: 0.1vw solid rgb(160, 164, 164);
+}
+
+.one_b{
+	top: 6vw;
+}
+
+.two_b{
+	top: 7.5vw;
+}
+
+.three_b{
+	top: 9vw;
+}
+
+}
+
+
+
+@media only screen and (max-width : 800px) and (min-width : 176px){
+
+.chat_block{
+	width: 90vw;
+	height: 75vw;
+	top: 25vw;
+	left: 5vw;
+	position: absolute;
+	background-color: rgb(235, 243, 242);
+	border: 0.01vw solid rgb(130 181 183);
+	overflow: hidden;
+}
+
+
+.chat_border{
+	width: 89.5vw;
+	height: 5.5vw;
+	top: 0.1vw;
+	left: 0.3vw;
+	position: absolute;
+	background-color: rgb(235, 243, 242);
+	box-shadow: 0 0.1vw 0 rgb(213, 221, 220);
+	color: rgb(114, 117, 116);
+	font-size: 3.75vw;
+	text-indent:1vw; 
+	line-height: 5.5vw;
+}
+
+.input_border{
+	width: 89.5vw;
+	height: 7vw;
+	bottom: 0.2vw;
+	left: 0.2vw;
+	position: absolute;
+	background-color: rgb(235, 243, 242);
+	box-shadow: 0 -0.1vw 0 rgb(213, 221, 220);
+}
+
+.write{
+	border: 0.1vw solid rgb(160, 164, 164);
+	width: 77vw;
+	height: 4vw;
+	margin-top: 0.5vw;
+	margin-left: 1vw;
+
+}
+
+.button{
+	width: 8vw;
+	height: 4vw;
+	margin-top: 1.5vw;
+	margin-right: 2vw;
+}
+
+
+.members_block{
+	width: 90vw;
+	height: 5vw;
+	top:105vw;
+	left: 5vw;
+	position: absolute;
+	background-color: rgb(238, 240, 240);
+	border: 0.1vw solid rgb(160, 164, 164);
+	color: rgb(114, 117, 116);
+	font-size: 3.25vw;
+	text-indent:1vw; 
+	line-height: 5.25vw;
+}
+
+.block{
+	width: 90vw;
+	height: 4vw;
+	left: 5vw;
+	position: absolute;
+	background-color: rgb(199, 220, 218);
+	border: 0.1vw solid rgb(160, 164, 164);
+}
+
+.retreat{
+	width: 5vw;
+	height: 2vw;
+	top: 127vw;
+	left: 5vw;
+	position: absolute;
+}
+
+.one_b{
+	top: 110vw;
+}
+
+.two_b{
+	top: 114vw;
+}
+
+.three_b{
+	top: 118vw;
+}
+
+}
+

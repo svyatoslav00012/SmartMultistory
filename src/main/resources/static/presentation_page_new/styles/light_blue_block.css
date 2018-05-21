@@ -1,0 +1,97 @@
+.light_blue_background_block{
+	width: 100%;
+	height:  33vw;
+	position: relative;
+	background-color: rgb(213, 245, 253);
+	overflow: hidden;
+}
+
+.light_blue_icons{
+	background-image: url("../image/blocks/red/red_icons.png");
+	background-size: cover; 
+	position: absolute;
+	display: inline-block;
+	margin: auto;
+/*	background-color: pink;*/
+}
+
+.light_blue_underscore1{
+	background-image: url("../image/blocks/red/red_underscore2.png");
+	background-size: cover;  
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+/*	background-color: green;*/
+}
+
+
+
+.light_blue_frame{
+	position: absolute;
+	background-image: url("../image/blocks/red/red_frame.png");
+	background-size: cover;
+}
+
+.light_blue_emblem{
+	position: absolute;
+	background-image: url("../image/blocks/red/red_emblem.png");
+	background-size: cover;
+}
+
+.light_blue_form{
+	position: absolute;
+	background-image: url("../image/blocks/red/red_form.png");
+	background-size: cover;
+}
+
+.light_blue_lateral_line{
+	background-image: url("../image/blocks/red/red_lateral_line.png");
+	background-size: cover; 
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+
+}
+
+
+.light_blue_icons_placing{
+	width: 41vw; 
+	height: 24vw;
+	bottom: 0vw;
+	right: 26vw;  
+}
+
+.light_blue_underscore1_placing{
+	width: 26vw; 
+	height: 15vw;
+	top:7vw;  
+	right:3vw; 
+}
+
+
+
+.light_blue_lateral_line_placing{
+	width: 2vw; 
+	height: 33vw; 
+	top:0vw;  
+    left:7vw;
+}
+
+.light_blue_text_placing{
+	width: 50vw; 
+	height: 6vw; 
+	top: 12vw;  
+	left:  51vw; 
+	line-height: 2vw;
+	font-size: 3vw;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0.15vw 1vw rgb(0, 0, 0);
+	position: absolute;
+}
+
+.light_blue_position{
+	width: 20vw;
+	height: 20vw;
+	top:7vw; 
+	left: 12vw;
+}

@@ -1,0 +1,102 @@
+.gray_background_block{
+	width: 100%;
+	height:  33vw;
+	position: relative;
+	background-color: rgb(219, 233, 232);
+}
+
+.gray_icons{
+	background-image: url("../image/blocks/green/green_icons.png");
+	background-size: cover; 
+	position: absolute;
+	display: inline-block;
+	margin: auto;
+/*	background-color: green;*/
+}
+
+.gray_underscore{
+	background-image: url("../image/blocks/green/green_underscore.png");
+	background-size: cover;  
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+/*	background-color: green;*/
+}
+
+
+.gray_frame{
+	position: absolute;
+	background-image: url("../image/blocks/green/green_frame.png");
+	background-size: cover;
+}
+
+.gray_emblem{
+	position: absolute;
+	background-image: url("../image/blocks/green/green_emblem.png");
+	background-size: cover;
+}
+
+.gray_form{
+	position: absolute;
+	background-image: url("../image/blocks/green/green_form.png");
+	background-size: cover;
+}
+
+.gray_lateral_line{
+	background-image: url("../image/blocks/green/green_lateral_line.png");
+	background-size: cover; 
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+
+}
+
+
+.gray_icons_placing{
+	width: 38vw; 
+	height: 19.9vw;
+	bottom: 0vw;
+	left: 0vw;  
+}
+
+.gray_underscore_placing{
+	width: 25vw; 
+	height: 12vw;
+	top:2.5vw;  
+	left:10vw; 
+}
+
+.gray_lateral_line_placing{
+	width: 2vw; 
+	height: 33vw; 
+	top:0vw;  
+    right:8vw;
+}
+
+.gray_text_placing{
+	width: 40vw; 
+	height: 5vw; 
+	top: 8vw;  
+	left: 14vw; 
+	line-height: 2vw;
+	font-size: 3vw;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0.15vw 1vw rgb(0, 0, 0);
+	position: absolute;
+}
+
+
+.gray_text_placing:hover{
+	width: 44vw; 
+	height: 5.5vw; 
+	-moz-transition: all 0.25s ease-out;
+	-o-transition: all 0.25s ease-out;
+	-webkit-transition: all 0.25s ease-out;
+}
+
+.gray_position{
+	width: 20vw;
+	height: 20vw;
+	top:7vw; 
+	right: 17vw;
+}

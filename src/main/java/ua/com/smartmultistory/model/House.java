@@ -1,6 +1,7 @@
 package ua.com.smartmultistory.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.validation.annotation.Validated;
 
@@ -19,7 +20,8 @@ public class House {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@OneToMany(mappedBy = "house")
+	@JsonManagedReference
+	@OneToMany(fetch=FetchType.LAZY, mappedBy = "house", cascade=CascadeType.PERSIST)
 	private List<Flat> flats;
 
 	@Column(name = "adress")
@@ -46,3 +48,19 @@ public class House {
 		this.flats = flats;
 	}
 }
+
+
+/*
+
+some changes to be able to save nested objects like
+
+{
+	"adress": "someAdress",
+	"flats": [
+		{
+		"number": "123a"
+		}
+	]
+}
+
+ */

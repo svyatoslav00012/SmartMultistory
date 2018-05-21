@@ -1,0 +1,116 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.background{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background-image: url("../images/Untitled66-3.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}
+
+.houses{
+	width: 100vw;
+	height: 45vw;
+	bottom: 0vw;
+	position: absolute;
+	background-image: url("../images/Untitled66-6.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;	
+}
+
+.block_of_text{
+	width: 100%;
+	height: 3.5vw;
+	top: 1vw;
+	position: absolute;
+	background-color: rgba(128, 128, 128, .3);
+	
+}
+
+.text_on_block{
+	font-size: 2.5vw;
+	line-height: 3.5vw;
+	color:  rgb(137, 138, 138);
+	opacity: 1;
+	margin-left: 3vw;
+}
+
+.container{
+	width: 40vw;
+	height: 25vw;
+	top: 1.5vw;
+/*	background-color: blue;*/
+	position: absolute;
+	left: 15vw;
+}
+
+.input_style{
+	border: 0.1vw solid rgb(160, 164, 164);
+	background-color: rgb(233, 236, 236);
+	position: absolute;
+	width: 20vw;
+	height: 1.5vw;
+	margin-left: 10vw;
+}
+
+.register{
+	position: absolute;
+	width: 11.5vw;
+	height: 2.5vw;
+	top: 20vw;
+	left: 14.5vw;
+	color: rgb(61, 61, 61);
+
+}
+
+.circle{
+	position: absolute;
+	left: 29vw;
+	width: 1vw;
+	height: 1vw;
+	background-image: url("../images/Untitled86-4.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;	
+}
+
+
+
+.block_home{
+	width: 48vw;
+	height: 27vw;
+	position: absolute;
+	top: 5.5vw;
+	left: 1vw;
+	background-color: rgba(216, 234, 236, .8 );
+	border-radius: 2vw;
+	box-shadow: 0 0.2vw 2vw rgb(137, 138, 138);
+	background-color: 
+}
+
+
+.photo_position{
+	width: 20vw;
+	height: 13vw;
+	position: absolute;
+	top: 1.5vw;
+	left: 2.5vw;
+}
+
+.background_photo{
+	background-color: rgb(234, 235, 235);
+	color: rgb(137, 138, 138);
+	font-size: 2vw;
+	line-height: 11.5vw;
+	text-align: center;
+	border: 0.1vw solid rgba(137, 138, 138, .7);
+}
+
+
+}

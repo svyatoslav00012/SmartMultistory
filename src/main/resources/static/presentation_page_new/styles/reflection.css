@@ -1,0 +1,70 @@
+.reflection_background{
+	width: 100%;
+	height: 45vw;
+	position: relative;
+    background-color: rgb(193, 234, 239);
+	overflow: hidden;
+}
+
+
+.reflection_houses{
+	width: 100%;
+	height: 59vw;
+	position: relative;
+	background-image: url("../image/attachments/Untitled75.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+
+}
+
+
+
+
+@media only screen and (max-width : 1920px) and (min-width : 800px){
+.reflection_text_placing{
+	width: 55vw;
+	height: 7vw;
+	top: 37vw; 
+	left: 4vw;
+	line-height: 2vw;
+	font-size: 3vw;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0.15vw 1vw rgb(0, 0, 0);
+	position: absolute;
+}
+
+
+}
+@media only screen and (max-width : 800px) and (min-width : 600px){
+.reflection_text_placing{
+	width: 65vw;
+	height: 8vw;
+	top: 37vw; 
+	left: 4vw;
+	line-height: 2vw;
+	font-size: 3vw;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0.15vw 1vw rgb(0, 0, 0);
+	position: absolute;
+}
+
+}
+
+
+
+@media only screen and (max-width : 600px) and (min-width : 176px){
+.reflection_text_placing{
+	width: 80vw;
+	height: 9vw;
+	top: 37vw; 
+	left: 4vw;
+	line-height: 2vw;
+	font-size: 3vw;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0.15vw 1vw rgb(0, 0, 0);
+	position: absolute;
+}
+
+
+} 

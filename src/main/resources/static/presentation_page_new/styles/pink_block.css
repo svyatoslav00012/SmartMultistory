@@ -1,0 +1,110 @@
+.pink_background_block{
+	width: 100%;
+	height:  33vw;
+	position: relative;
+	background-color: rgb(252, 232, 239);
+	overflow: hidden;
+}
+
+.pink_icons{
+	background-image: url("../image/blocks/pink/Untitled86.png");
+	background-size: cover; 
+	position: absolute;
+	display: inline-block;
+	margin: auto;
+
+}
+
+.pink_underscore1{
+	background-image: url("../image/blocks/pink/pink_underscore1.png");
+	background-size: cover;  
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+/*	background-color: green;*/
+}
+
+.pink_underscore2{
+	background-image: url("../image/blocks/pink/pink_underscore2.png");
+	background-size: cover;  
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+/*	background-color: green;*/
+}
+
+
+.pink_frame{
+	position: absolute;
+	background-image: url("../image/blocks/pink/pink_frame.png");
+	background-size: cover;
+}
+
+.pink_emblem{
+	position: absolute;
+	background-image: url("../image/blocks/pink/pink_emblem.png");
+	background-size: cover;
+}
+
+.pink_form{
+	position: absolute;
+	background-image: url("../image/blocks/pink/pink_form.png");
+	background-size: cover;
+}
+
+.pink_lateral_line{
+	background-image: url("../image/blocks/pink/pink_lateral_line.png");
+	background-size: cover; 
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+
+}
+
+
+.pink_icons_placing{
+	width: 30vw; 
+	height: 30vw;
+	bottom: 0vw;
+	right: 0vw;  
+}
+
+.pink_underscore1_placing{
+	width: 20vw; 
+	height: 1vw;
+	top:5vw;  
+	left:0vw; 
+}
+
+.pink_underscore2_placing{
+	width: 30vw; 
+	height: 1vw;
+	top:21vw;  
+	left:5vw; 
+}
+/*
+.pink_lateral_line_placing{
+	width: 2vw; 
+	height: 33vw; 
+	top:0vw;  
+    left:3vw;
+}*/
+
+.pink_text_placing{
+	width: 35vw; 
+	height: 8.23vw; 
+	top: 10vw;  
+	left: 5vw; 
+	line-height: 2vw;
+	font-size: 3vw;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0.15vw 1vw rgb(0, 0, 0);
+	position: absolute;
+}
+
+.pink_position{
+	width: 20vw;
+	height: 20vw;
+	top:7vw; 
+	right: 34vw;
+}

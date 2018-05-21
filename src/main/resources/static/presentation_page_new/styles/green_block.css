@@ -1,0 +1,100 @@
+.green_background_block{
+	width: 100%;
+	height:  33vw;
+	position: relative;
+	background-color: rgb(228, 243, 219);
+	overflow: hidden;
+}
+
+.green_icons{
+	background-image: url("../image/blocks/purple/purple_icons.png");
+	background-size: cover; 
+	position: absolute;
+	display: inline-block;
+	margin: auto;
+/*	background-color: green;*/
+
+}
+
+
+.green_underscore2{
+	background-image: url("../image/blocks/purple/purple_underscore2.png");
+	background-size: cover;  
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+/*	background-color: green;*/
+}
+
+
+.green_frame{
+	position: absolute;
+	background-image: url("../image/blocks/purple/purple_frame.png");
+	background-size: cover;
+}
+
+.green_emblem{
+	position: absolute;
+	background-image: url("../image/blocks/purple/purple_emblem.png");
+	background-size: cover;
+}
+
+.green_form{
+	position: absolute;
+	background-image: url("../image/blocks/purple/purple_form.png");
+	background-size: cover;
+}
+
+.green_lateral_line{
+	background-image: url("../image/blocks/purple/purple_lateral_line.png");
+	background-size: cover; 
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+
+}
+
+
+.green_icons_placing{
+	width: 25vw; 
+	height: 25vw;
+	bottom: 0vw;
+	left: 3vw;  
+}
+
+
+
+
+.green_underscore2_placing{
+	width: 30vw; 
+	height: 18vw;
+	top:10vw;  
+	right:7vw; 
+}
+
+/*.green_lateral_line_placing{
+	width: 2vw; 
+	height: 33vw; 
+	top:0vw;  
+    left:25vw;
+}*/
+
+.green_text_placing{
+	width: 44vw; 
+	height: 10vw; 
+	top: 13vw;  
+	left: 62vw; 
+	line-height: 2vw;
+	font-size: 3vw;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0.15vw 1vw rgb(0, 0, 0);
+	position: absolute;
+}
+
+
+.green_position{
+	width: 20vw;
+	height: 20vw;
+	top:7vw; 
+	left: 35vw;
+}

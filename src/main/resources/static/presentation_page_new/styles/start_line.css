@@ -1,0 +1,91 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+@media only screen and (max-width : 1920px) and (min-width : 800px){
+.start_background_line{
+	width: 100%;
+	height: 45vw;
+	position: relative;
+	background-image: url("../image/attachments/Untitled66-3.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}
+
+.houses{
+	width: 100%;
+	height: 45vw;
+	background-image: url("../image/attachments/Untitled66-4.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}
+
+.frame_for_menu{
+	height: 25vw;
+	width: 50vw;
+/*	background-color: green;*/
+	top: 1vw;
+	left: calc((100vw - 50vw) / 2);
+	position: relative;	
+}
+}
+
+
+@media only screen and (max-width : 800px) and (min-width : 600px){
+.start_background_line{
+
+	width: 100%;
+	height: 45vw;
+	position: relative;
+	background-image: url("../image/attachments/Untitled66-3.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}
+
+
+.houses{
+	width: 100%;
+	height: 45vw;
+	background-image: url("../image/attachments/Untitled66-4.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}
+
+.frame_for_menu{
+	height: 35vw;
+	width: 70vw;
+/*	background-color: green;*/
+	top: 2.5vw;
+	left: calc((100vw - 60vw) / 2);
+	position: relative;	
+}
+}
+
+@media only screen and (max-width : 600px) and (min-width : 176px){
+.start_background_line{
+
+	width: 100%;
+	height: 45vw;
+	position: relative;
+	background-image: url("../image/attachments/Untitled66-3.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}
+
+.frame_for_menu{
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 45vw;
+/*	background-color: green;*/
+	position: relative;	
+}
+}
+
