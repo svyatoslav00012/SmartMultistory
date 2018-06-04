@@ -265,10 +265,10 @@
 
 
 .icone_left_border{
-	width: 6.75vw;
-	height: 7vw;
+	width: 8vw;
+	height: 8vw;
 	bottom: 0vw;
-	left: 1.25vw;
+	right:  0vw;
 	position: absolute;
 }
 }

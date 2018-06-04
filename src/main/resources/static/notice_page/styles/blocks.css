@@ -145,6 +145,7 @@
 	position: absolute;
 	background-color: rgb(207, 139, 165);
 	box-shadow: 0.1vw 0 0 rgb(216, 116, 151);
+	cursor: pointer;
 }
 
 .left_button a {
@@ -179,6 +180,7 @@
 	text-indent: 2.7vw; 
 	line-height: 3vw;
 	font-size: 1.5vw;
+	cursor: pointer;
 }
 
 
@@ -187,7 +189,8 @@
 	left: 5vw;
 	width: 45vw;
 	height: 25vw;
-	position: absolute;
+	position: relative;
+	margin-top: 20px;
 	background-color: rgb(227, 242, 253);
 	box-shadow: 0.03vw 0 2vw 0.03vw rgb(30, 30, 30);
 	overflow: hidden; 
@@ -253,6 +256,7 @@
 	text-align: center; 
 	line-height: 1.05vw;
 	font-size: 1vw;
+	cursor: pointer;
 }
 
 
@@ -316,6 +320,7 @@
 	bottom:  3vw;
 	right: 5vw;
 	color: rgb(61, 61, 61);
+	cursor: pointer;
 }
 
 .input2{
@@ -325,6 +330,7 @@
 	bottom:  3vw;
 	left:  5vw;
 	color: rgb(61, 61, 61);
+	cursor: pointer;
 }
 
 
@@ -372,7 +378,7 @@
 	height: 18vw;
 	top: 10vw;
 	left: 15vw;
-	position: absolute;
+	position: relative;
 }
 
 .one_board_ener{

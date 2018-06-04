@@ -50,32 +50,31 @@ of his contact information ( email, phone number, social network page etc.)">
             $(".scroll_block").empty();
 
             $.get("/api/notes", function (notes) {
+
+                var t = 1;
+
                 $.each(notes, function (index, note) {
-                    $("#scrl").append("<div class=\"one_board\">"
-                        //  + topic + "\n\n" + content
-                        + "<div class=\"one_board_ener\">"
+                    $("#scrl").append(
+                        "<div class=\"one_board\" style=\"top:" + t + "3vw;\">"
+                        + note.topic + "\n\n" + note.content +
+                        +"<div class=\"one_board_ener\">"
                         + "<div class=\"one_board_icon\"> </div>"
                         + "</div>"
-                        + "</div>");
+                        + "</div>"
+                    );
+                    t+=2;
                 });
             });
-
-            $("#scrl").append("<div class=\"one_board\">"
-                //  + topic + "\n\n" + content
-                + "<div class=\"one_board_ener\">"
-                + "<div class=\"one_board_icon\"> </div>"
-                + "</div>"
-                + "</div>");
 
         }
 
         $(document).ready(updateNotes());
 
-//        $("button").click(function () {
-//            $.get("demo_test.asp", function (data, status) {
-//                alert("Data: " + data + "\nStatus: " + status);
-//            });
-//        });
+        //        $("button").click(function () {
+        //            $.get("demo_test.asp", function (data, status) {
+        //                alert("Data: " + data + "\nStatus: " + status);
+        //            });
+        //        });
 
     </script>
 
@@ -93,94 +92,94 @@ of his contact information ( email, phone number, social network page etc.)">
 
 
         <%--<div class="one_board" style="top:25vw;">--%>
-            <%--<div class="one_board_ener">--%>
-                <%--<div class="one_board_icone"></div>--%>
-            <%--</div>--%>
+        <%--<div class="one_board_ener">--%>
+        <%--<div class="one_board_icone"></div>--%>
+        <%--</div>--%>
         <%--</div>--%>
 
 
         <%--<div class="one_board" style="top:45vw;">--%>
-            <%--<div class="one_board_ener">--%>
-                <%--<div class="one_board_icone"></div>--%>
-            <%--</div>--%>
+        <%--<div class="one_board_ener">--%>
+        <%--<div class="one_board_icone"></div>--%>
         <%--</div>--%>
-    <%--</div>--%>
-</div>
-
-
-<!-- 
-			<div class="notice_board">
-				<div class="text_button"><span>Notice board</span></div>
-				<div class="make_button"><span>Make a notice</span></div>
-			</div>
-
-			<div class="one_board">
-				<div class="one_board_ener">
-					<div class="one_board_icone"></div>
-				</div>
-			</div>
-
-
-			<div class="two_board">
-				<div class="two_board_ener">
-					<div class="two_board_icone_one"></div>
-					<div class="two_board_icone_two"></div>
-					<div class="two_board_icone_tree"></div>
-
-				</div>
-			</div>
-
-
-			<div class="tree_board">
-				<div class="tree_board_ener">
-					<div class="tree_board_icone"></div>
-				</div>
-			</div> -->
-
-<div class="retreat"></div>
-
-
-<div class="left_border">
-
-    <div class="icone_left_border"></div>
-
-
-    <div class="one block_for_emblem">
-        <a href="chat_page"></a>
-    </div>
-    <div class="two"></div>
-    <div class="tree block_for_emblem">
-        <a href="tracking_page"></a>
-    </div>
-    <div class="four block_for_emblem">
-        <a href="counters_page"></a>
-    </div>
-    <div class="five block_for_emblem">
-        <a href="brief_page"></a>
+        <%--</div>--%>
+        <%--</div>--%>
     </div>
 
-</div>
+
+    <!--
+                <div class="notice_board">
+                    <div class="text_button"><span>Notice board</span></div>
+                    <div class="make_button"><span>Make a notice</span></div>
+                </div>
+
+                <div class="one_board">
+                    <div class="one_board_ener">
+                        <div class="one_board_icone"></div>
+                    </div>
+                </div>
 
 
-<div class="border">
+                <div class="two_board">
+                    <div class="two_board_ener">
+                        <div class="two_board_icone_one"></div>
+                        <div class="two_board_icone_two"></div>
+                        <div class="two_board_icone_tree"></div>
+
+                    </div>
+                </div>
 
 
-    <div class="under_home">
-        <div class="icone_home"></div>
-        <div class="home">
-            <a href="home_page"><font>HOME</font></a>
+                <div class="tree_board">
+                    <div class="tree_board_ener">
+                        <div class="tree_board_icone"></div>
+                    </div>
+                </div> -->
+
+    <div class="retreat"></div>
+
+
+    <div class="left_border">
+
+        <div class="icone_left_border"></div>
+
+
+        <div class="one block_for_emblem">
+            <a href="chat_page"></a>
         </div>
-    </div>
-
-    <div class="under_logout">
-        <div class="icone_logout"></div>
-        <div class="logout">
-            <a href="presentation_page"><font>LOG OUT</font></a>
+        <div class="two"></div>
+        <div class="tree block_for_emblem">
+            <a href="tracking_page"></a>
         </div>
+        <div class="four block_for_emblem">
+            <a href="counters_page"></a>
+        </div>
+        <div class="five block_for_emblem">
+            <a href="brief_page"></a>
+        </div>
+
     </div>
 
 
-</div>
+    <div class="border">
+
+
+        <div class="under_home">
+            <div class="icone_home"></div>
+            <div class="home">
+                <a href="home_page"><font>HOME</font></a>
+            </div>
+        </div>
+
+        <div class="under_logout">
+            <div class="icone_logout"></div>
+            <div class="logout">
+                <a href="presentation_page"><font>LOG OUT</font></a>
+            </div>
+        </div>
+
+
+    </div>
 
 
 </body>

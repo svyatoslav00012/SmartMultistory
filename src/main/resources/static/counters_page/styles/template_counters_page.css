@@ -7,7 +7,7 @@
 .background{
 	width: 100vw;
 	height: 100vh;
-	background-color: rgb(251, 224, 234);
+	background-color: rgb(243, 249, 239);
 	position: fixed;
 
 }
@@ -20,7 +20,7 @@
 
 
 .left_border{
-	background-color: rgb(252, 237, 243);
+	background-color: rgb(248, 251, 246);
 	box-shadow: 0.03vw 0 0 0.03vw rgb(179, 170, 173);
 }
 
@@ -265,10 +265,10 @@
 
 
 .icone_left_border{
-	width: 6.75vw;
-	height: 7vw;
+	width: 9vw;
+	height: 9vw;
 	bottom: 0vw;
-	left: 1.25vw;
+	left: 0.5vw;
 	position: absolute;
 }
 }

@@ -35,13 +35,13 @@ of his contact information ( email, phone number, social network page etc.)">
 
 			<div class="brief_border">
 				<span class="first_phrase">Last check:</span>
-				<div class="num_ago"></div>
+				<div class="num_ago">15</div>
 				<span class="second_phrase">min ago</span>
 			</div>
 
 			<div class="status_board">
 				<span class="text">State:</span>
-				<div class="status"></div>
+				<div class="status">reseived</div>
 			</div>
 
 			<div class="data_board">
@@ -50,6 +50,72 @@ of his contact information ( email, phone number, social network page etc.)">
 					<input class="button" type="reset" value="Clear table" name="">
 				</div>
 			</div>
+
+				<div class="table_frame">
+					<div class="time_frame">Time</div>
+					<div class="date_frame">Date</div>
+					<div class="state_frame">State</div>
+				</div>
+
+
+
+
+
+
+         <div class="frame_generation">  <!--  РАМКА, В ЯКУ НАКИДУЮТЬСЯ БЛОКИ -->
+
+
+
+
+  <!------------------------------------------------------------- EDIT ONLY THIS -------------------------------------------------------------->
+
+
+
+               <!-----------------------	GENERATE THIS -------------------------->
+ 
+				<!--  <div class="block_for_generation"> -->    <!-- САМА ОСНОВА БЛОКУ(МІСТИТЬ ПІДБЛОКИ: ЧАС, ДАТА, СТАТУС )  -->
+					<!-- <div class="time_generation"></div>	 -->	<!-- В ЦЕЙ БЛОК ЗАЛИВАТИ ЧАС  -->
+					<!-- <div class="date_generation"></div> -->		<!-- В ЦЕЙ БЛОК ЗАЛИВАТИ ДАТУ -->
+					<!-- <div class="state_generation"></div> -->	<!-- В ЦЕЙ БЛОК ЗАЛИВАТИ СТАТУС(ПУСТО, ОТРИМАНО)  -->
+				<!-- </div>	 -->
+
+					<!-- ------------------------------------------------------ -->
+
+
+
+				<!-------------------  DELETE THIS(EXAMPLE) ------------------------>
+
+				
+
+				<div class="block_for_generation">
+					<div class="time_generation">15:27</div>
+					<div class="date_generation">17.05.2018</div>
+					<div class="state_generation">recived</div>
+				</div>
+
+
+				<div class="block_for_generation">
+					<div class="time_generation">12:00</div>
+					<div class="date_generation">17.05.2018</div>
+					<div class="state_generation">empty</div>
+				</div>
+
+				<div class="block_for_generation">
+					<div class="time_generation">09:15</div>
+					<div class="date_generation">17.05.2018</div>
+					<div class="state_generation">empty</div>
+				</div>
+
+
+			</div>
+
+			<!-- --------------------------------------------------------->
+		</div>
+
+
+
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
 
 
 

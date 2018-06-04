@@ -53,6 +53,12 @@ public class NoteController {
 		return ResponseEntity.ok().build();
 	}
 
+	@DeleteMapping("/notes/clear")
+	public ResponseEntity<?> deleteNotes() {
+		noteRepository.deleteAll();
+		return ResponseEntity.ok().build();
+	}
+
 //	@PutMapping("/note/{id}")
 //	public Note updateNote(@PathVariable(value = "id") Long noteId,
 //						   @Valid @RequestBody Note noteDetails) {

@@ -9,7 +9,7 @@ public class NoticePageController {
 
 	@GetMapping("/notice_page")
 	String getView(Model model) {
-		return "notice_page1";
+		return "notice_page2";
 	}
 
 }

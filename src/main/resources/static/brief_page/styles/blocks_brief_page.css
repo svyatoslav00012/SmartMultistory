@@ -42,7 +42,11 @@
 	position: absolute;
 	top: 0.75vw;
 	left: 8vw;
-	background-color: rgb(91, 124, 132);
+	font-size: 1.2vw;
+	line-height: 1.7vw;
+	margin-left: 0.4vw;
+	color: rgb(91, 124, 132);
+/*	background-color: rgb(91, 124, 132);*/
 }
 
 .second_phrase{
@@ -93,10 +97,6 @@
 }
 
 
-
-
-
-
 .status_board{
 	width: 29.9vw;
 	height: 3vw;
@@ -120,8 +120,136 @@
 	position: absolute;
 	top: 0.75vw;
 	left: 5vw;
-	background-color: rgb(91, 124, 132);
+	font-size: 1.3vw;
+	line-height: 1.7vw;
+	margin-left: 0.1vw;
+	color: rgb(91, 124, 132);
+	/*background-color: rgb(91, 124, 132);*/
 }
+
+
+
+
+
+
+
+.table_frame{
+	width: 60vw;
+	height: 2.5vw;
+	top: 9.5vw;
+	left: 10.05vw;
+	position: absolute;
+	background-color: rgb(231, 247, 252);
+	border: 0.005vw solid rgb(162, 209, 221);
+}
+
+.frame_generation{
+	width: 60vw;
+	height: 25vw;
+	top: 12vw;
+	left: 10.05vw;
+	position: absolute;
+	background-color: rgb(215, 243, 250);
+	border: 0.005vw solid rgb(144, 158, 161);
+}
+
+.time_frame{
+	width: 12vw;
+	height: 2.5vw;
+	top: 0vw;
+	left: 0vw;
+	position: absolute;
+	font-size: 1.6vw;
+	line-height: 2.4vw;
+	text-align: center;
+	color: rgb(33, 100, 119);
+	background-color: rgb(231, 247, 252);
+	border: 0.005vw solid rgb(162, 209, 221);
+}
+.date_frame{
+	width: 25vw;
+	height: 2.5vw;
+	top: 0vw;
+	left: 12vw;
+	position: absolute;
+	font-size: 1.6vw;
+	line-height: 2.4vw;
+	text-align: center;
+	color: rgb(33, 100, 119);
+	background-color: rgb(231, 247, 252);
+	border: 0.005vw solid rgb(162, 209, 221);	
+}
+.state_frame{
+	width: 23.2vw;
+	height: 2.5vw;
+	top: 0vw;
+	left: 36.8vw;
+	position: absolute;
+	font-size: 1.6vw;
+	line-height: 2.4vw;
+	text-align: center;
+	color: rgb(33, 100, 119);
+	background-color: rgb(231, 247, 252);
+	border: 0.005vw solid rgb(162, 209, 221);
+}
+
+
+
+
+
+
+
+
+
+.block_for_generation{
+	width: 100%;
+	height: 2.5vw;
+	position: relative;
+	background-color: rgb(219, 241, 246);
+	border: 0.005vw solid rgb(162, 209, 221);
+}
+
+
+.time_generation{
+	width: 12vw;
+	height: 2.5vw;
+	top: 0vw;
+	left: 0vw;
+	position: absolute;
+	font-size: 1.3vw;
+	line-height: 2.4vw;
+	text-align: center;
+	color: rgb(91, 124, 132);
+	background-color: rgb(231, 247, 252);
+	border: 0.005vw solid rgb(162, 209, 221);
+}
+.date_generation{
+	width: 25vw;
+	height: 2.5vw;
+	top: 0vw;
+	left: 11.95vw;
+	position: absolute;
+	font-size: 1.3vw;
+	line-height: 2.4vw;
+	text-align: center;
+	color: rgb(91, 124, 132);
+	background-color: rgb(231, 247, 252);
+	border: 0.005vw solid rgb(162, 209, 221);	
+}
+.state_generation{
+	width: 23.25vw;
+	height: 2.5vw;
+	top: 0vw;
+	left: 36.75vw;
+	position: absolute;
+	font-size: 1.3vw;
+	line-height: 2.4vw;
+	text-align: center;
+	color: rgb(91, 124, 132);
+	background-color: rgb(231, 247, 252);
+	border: 0.005vw solid rgb(162, 209, 221);
+}
+
 
 }
 

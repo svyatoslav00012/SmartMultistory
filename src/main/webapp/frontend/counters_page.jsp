@@ -35,6 +35,21 @@ of his contact information ( email, phone number, social network page etc.)">
 
 
 
+			<div class="basis">
+				<div class="boarder_table">
+					<div class="counter">Counter</div>
+					<div class="indexes">Indexes</div>
+					<div class="year">Year</div>
+					<div class="month">Month</div>
+					<div class="monthly_dynamics">Monthly dynamics</div>
+				</div>
+
+				
+		<!-- 		<div class="frame">
+					 <div class="block_for_generation"></div>
+				</div>  -->
+			</div>
+
 
 			<div class="retreat"></div>
 
