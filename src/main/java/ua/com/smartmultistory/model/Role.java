@@ -1,12 +1,14 @@
 package ua.com.smartmultistory.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.validation.annotation.Validated;
+import ua.com.smartmultistory.enumeration.RoleName;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
@@ -14,49 +16,30 @@ import java.util.List;
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(allowGetters = true)
 @Validated
-public class Role {
+@Data
+public class Role implements GrantedAuthority {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private int id;
+
+	@Override
+	public String getAuthority() {
+		return name.name();
+	}
 
 	@OneToMany(mappedBy = "role")
-	private List<User> users;
+	private List<Account> accounts;
 
 	@Column(name = "name")
 	@NotNull
-	private String name;
-
-	@Column(name = "priority")
-	@NotNull
-	@Size()
-	private int priority;
+	private RoleName name;
 
 	public String getName() {
-		return name;
+		return name.name();
 	}
 
 	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getPriority() {
-		return priority;
-	}
-
-	public void setPriority(int priority) {
-		this.priority = priority;
-	}
-
-	public List<User> getUsers() {
-		return users;
-	}
-
-	public void setUsers(List<User> users) {
-		this.users = users;
-	}
-
-	public long getId() {
-		return id;
+		this.name = RoleName.valueOf(name);
 	}
 }

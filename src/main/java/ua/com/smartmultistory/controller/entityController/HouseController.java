@@ -1,11 +1,11 @@
-package ua.com.smartmultistory.controller;
+package ua.com.smartmultistory.controller.entityController;
 
-import ua.com.smartmultistory.exception.ResourceNotFoundException;
-import ua.com.smartmultistory.model.House;
-import ua.com.smartmultistory.repository.HouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ua.com.smartmultistory.exception.ResourceNotFoundException;
+import ua.com.smartmultistory.model.House;
+import ua.com.smartmultistory.repository.HouseRepository;
 
 import javax.validation.Valid;
 import java.util.List;

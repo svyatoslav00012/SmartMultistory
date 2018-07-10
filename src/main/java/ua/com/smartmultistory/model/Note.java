@@ -1,5 +1,6 @@
 package ua.com.smartmultistory.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -27,5 +28,15 @@ public class Note {
 	@Column(name = "content")
 	@NotNull
 	private String content;
+
+	@ManyToOne
+	@JsonBackReference
+	@JoinColumn(name = "flat_id")
+	private Flat flat;
+
+	@ManyToOne
+	@JsonBackReference
+	@JoinColumn(name = "house_id")
+	private House house;
 
 }

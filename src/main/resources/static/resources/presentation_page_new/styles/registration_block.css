@@ -118,21 +118,19 @@
 	font-size: 1.5vw;
 }
 
-
-.conect{
+.connect {
 	width: 11vw;
 	height: 2.8vw;
 /*	background-color: rgb(112, 164, 154);*/
 	top: 3vw;
-	left: 2.1vw;
+    left: 1vw;
 	position: absolute;
 	-moz-transition: all 0.25s ease-out;
 	-o-transition: all 0.25s ease-out;
 	-webkit-transition: all 0.25s ease-out;
 }
 
-
-.conect a {
+.connect a {
 	height: 100%; 
 	display: block;
 	color: rgb(146, 154, 156);
@@ -170,7 +168,7 @@
 
 
 .help:hover,
-.conect:hover,
+.connect:hover,
 .home:hover{
 	left: 4vw;
 	-moz-transition: all 0.25s ease-out;
@@ -179,9 +177,7 @@
 
 }
 
-
-
-.home_icone{
+.home_icon {
 	width: 1.5vw;
 	height: 1.5vw;
 	top: 1.65vw;
@@ -192,7 +188,8 @@
 	background-position: center bottom;
 	position: absolute;
 }
-.conect_icone{
+
+.connect_icon {
 	width: 1.5vw;
 	height: 1.5vw;
 	top: 3.65vw;
@@ -203,7 +200,8 @@
 	background-position: center bottom;
 	position: absolute;
 }
-.help_icone{
+
+.help_icon {
 	width: 1.5vw;
 	height: 1.5vw;
 	top: 5.65vw;

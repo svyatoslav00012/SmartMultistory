@@ -6,8 +6,10 @@
 <head>
 	<meta charset="UTF-8">
 
-	<link rel="stylesheet"  href="counters_page/styles/template_counters_page.css">
-	<link rel="stylesheet"  href="counters_page/styles/blocks_counters_page.css">
+    <link rel="stylesheet"
+          href="/resources/counters_page/styles/template_counters_page.css">
+    <link rel="stylesheet"
+          href="/resources/counters_page/styles/blocks_counters_page.css">
 
 
 	<title>CountersBoard</title>
@@ -64,19 +66,19 @@ of his contact information ( email, phone number, social network page etc.)">
 
 
 			<div class="one block_for_emblem">
-				<a href="chat_page"></a>
+                <a href="chat"></a>
 			</div>
 			<div class="two block_for_emblem">
-				<a href="notice_page"></a>
+                <a href="notice"></a>
 			</div>
 			<div class="tree block_for_emblem">
-				<a href="tracking_page"></a>
+                <a href="tracking"></a>
 			</div>
 			<div class="four">
-				<a href="brief_page"></a>
+                <a href="brief"></a>
 			</div>
 			<div class="five block_for_emblem">
-				<a href="brief_page"></a>
+                <a href="brief"></a>
 			</div>
 
 	</div>
@@ -92,14 +94,14 @@ of his contact information ( email, phone number, social network page etc.)">
 					<div class="under_home">
 						<div class="icone_home"></div>
 						<div class="home">
-							<a href="home_page"><font>HOME</font></a>
+                            <a href="home><font>HOME</font></a>
 						</div>
 					</div>
 																		
-					<div class="under_logout">
+					<div class=" under_logout">
 						<div class="icone_logout"></div>
 						<div class="logout">
-							<a href="presentation_page"><font>LOG OUT</font></a>
+                            <a href="presentation><font>LOG OUT</font></a>
 						</div>
 					</div>
 

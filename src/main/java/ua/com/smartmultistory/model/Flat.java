@@ -2,6 +2,7 @@ package ua.com.smartmultistory.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.validation.annotation.Validated;
 
@@ -15,6 +16,7 @@ import java.util.List;
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(allowGetters = true)
 @Validated
+@Data
 public class Flat {
 
 	@Id
@@ -23,6 +25,9 @@ public class Flat {
 
 	@OneToMany(mappedBy = "flat")
 	private List<User> users;
+
+	@OneToMany(mappedBy = "flat")
+	private List<Note> notes;
 
 	@NotNull
 	@Size(max = 14, min = 1)
@@ -34,31 +39,10 @@ public class Flat {
 	@JoinColumn(name = "house_id")
 	private House house;
 
-	public long getId() {
-		return id;
-	}
+	@NotNull
+	@OneToOne
+	@JsonBackReference
+	@JoinColumn(name = "id")
+	private Flat account;
 
-	public String getNumber() {
-		return number;
-	}
-
-	public void setNumber(String number) {
-		this.number = number;
-	}
-
-	public House getHouse() {
-		return house;
-	}
-
-	public void setHouse(House house) {
-		this.house = house;
-	}
-
-	public List<User> getUsers() {
-		return users;
-	}
-
-	public void setUsers(List<User> users) {
-		this.users = users;
-	}
 }

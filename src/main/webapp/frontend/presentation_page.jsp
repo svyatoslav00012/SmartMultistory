@@ -6,18 +6,30 @@
 
 
 <head>
-	<link rel="stylesheet"  href="presentation_page_new/styles/start_line.css">
-	<link rel="stylesheet"  href="presentation_page_new/styles/start_menu.css">
-	<link rel="stylesheet"  href="presentation_page_new/styles/reflection.css">
+    <link rel="stylesheet"
+          href="resources/presentation_page_new/styles/start_line.css">
+    <link rel="stylesheet"
+          href="resources/presentation_page_new/styles/start_menu.css">
+    <link rel="stylesheet"
+          href="resources/presentation_page_new/styles/reflection.css">
 
-	<link rel="stylesheet"  href="presentation_page_new/styles/gray_block.css">
-	<link rel="stylesheet"  href="presentation_page_new/styles/pink_block.css">
-	<link rel="stylesheet"  href="presentation_page_new/styles/blue_block.css">
-	<link rel="stylesheet"  href="presentation_page_new/styles/green_block.css">
-	<link rel="stylesheet"  href="presentation_page_new/styles/purple_block.css">
-	<link rel="stylesheet"  href="presentation_page_new/styles/light_blue_block.css">
+    <link rel="stylesheet"
+          href="resources/presentation_page_new/styles/gray_block.css">
+    <link rel="stylesheet"
+          href="resources/presentation_page_new/styles/pink_block.css">
+    <link rel="stylesheet"
+          href="resources/presentation_page_new/styles/blue_block.css">
+    <link rel="stylesheet"
+          href="resources/presentation_page_new/styles/green_block.css">
+    <link rel="stylesheet"
+          href="resources/presentation_page_new/styles/purple_block.css">
+    <link rel="stylesheet"
+          href="resources/presentation_page_new/styles/light_blue_block.css">
 
-	<link rel="stylesheet"  href="presentation_page_new/styles/registration_block.css">
+    <link rel="stylesheet"
+          href="resources/presentation_page_new/styles/registration_block.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<meta charset="UTF-8">
 	<title>SmartMultistory</title>
@@ -26,6 +38,33 @@
 	<meta name="viewport" content="width=device-width">
 
 
+    <style>
+        #toTop {
+            display: none;
+            position: fixed;
+            right: 3vw;
+            bottom: 2vw;
+            width: 5vw;
+            height: 5vw;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            z-index: 99;
+            background: rgba(100, 100, 100, 0.2) url("resources/presentation_page_new/image/attachments/upCircle.png");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            border-radius: 50px;
+        }
+
+        #toTop:hover {
+            background: rgba(100, 100, 100, 0.5) url("resources/presentation_page_new/image/attachments/upCircle.png");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+    </style>
 </head>
 
 
@@ -36,8 +75,67 @@
 
 
 <body>
-   
-	<div class="start_background_line">
+
+<script>
+
+    function scrollToTop() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 700);
+    }
+
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("toTop").style.display = "block";
+        } else {
+            document.getElementById("toTop").style.display = "none";
+        }
+    }
+
+    $(document).ready(function () {
+        setTimeout(function () {
+            window.scrollTo(0, 0);
+        }, 1);
+        $(".message_placing").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#gray").offset().top
+            }, 700);
+        });
+        $(".notification_placing").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#pink").offset().top
+            }, 700);
+        });
+        $(".tracking_placing").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#blue").offset().top
+            }, 700);
+        });
+        $(".mensuration_placing").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#green").offset().top
+            }, 800);
+        });
+
+        $(".alarms_placing").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#purple").offset().top
+            }, 900);
+        });
+        $(".mail_placing").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#light_blue").offset().top
+            }, 900);
+        });
+
+    });
+</script>
+
+<div class="start_background_line">
 		<div class="houses">
 			<div class="frame_for_menu">
 				<div class="block_for_photo">
@@ -62,6 +160,7 @@
 		</div>
 	</div>
 
+<button id="toTop" onclick="scrollToTop()"></button>
 
 
 	<div class="reflection_background">
@@ -169,16 +268,18 @@
 
 	<div class="registration_background">
 		<div class="registration_houses">
-	
-			<div class="button"><a href="join_page"><span>Join us in one click</span></a></div>
-			<div class="home"><a href="entry_page"><span>Home</span></a></div>
-			<div class="conect"><a href="??????"><span>Conect with us</span></a></div>
+
+            <div class="button"><a
+                    href="howToJoin"><span>Join us in one click</span></a></div>
+            <div class="home"><a href="login"><span>Home</span></a></div>
+            <div class="connect"><a href="??????"><span>Contact us</span></a>
+            </div>
 			<div class="help"><a href="??????"><span>Help</span></a></div> 
 			<div class="frame"></div>
 			<div class="inscription"><a href="presentation_page"><span>SmartMultistory</span></a></div>
-			<div class="home_icone"></div>
-			<div class="conect_icone"></div>
-			<div class="help_icone"></div>
+            <div class="home_icon"></div>
+            <div class="connect_icon"></div>
+            <div class="help_icon"></div>
 			<div class="line"></div>
 
 		</div>

@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 
-	<link rel="stylesheet"  href="join_page/styles/join.css">
+    <link rel="stylesheet" href="/resources/join_page/styles/join.css">
 	
 
 	<title>JoinUs</title>
@@ -35,14 +35,18 @@ of his contact information ( email, phone number, social network page etc.)">
 
 		<input class="input_style" src="images/Untitled85-17.png" style="	margin-top: 0.5vw;" type="text" name="" required placeholder="Name" autocomplete="on" pattern="[A-Za-zА-Яа-яЁё]">
 		<input class="input_style" style="	margin-top: 2.5vw;" type="text" name="" required placeholder="Surname" autocomplete="on" pattern="[A-Za-zА-Яа-яЁё]">
-		<input class="input_style" style="	margin-top: 4.5vw;" type="text" name="" placeholder="Name" autocomplete="on" pattern="[A-Za-zА-Яа-яЁё]">
+        <input class="input_style" style="	margin-top: 4.5vw;" type="text"
+               name="" placeholder="Last name" autocomplete="on"
+               pattern="[A-Za-zА-Яа-яЁё]">
 		<input class="input_style" style="	margin-top: 6.5vw;" type="text" name="" required placeholder="Email" autocomplete="on" pattern="[A-Za-z0-9]">
 		<input class="input_style" style="	margin-top: 8.5vw;" type="text" name="" placeholder="Phone number" autocomplete="on" pattern="[0-9]">
 		<input class="input_style" style="	margin-top: 10.5vw;" type="text" name="" required placeholder="Flat" autocomplete="on" pattern="[0-9]">
 		<input class="input_style" style="	margin-top: 12.5vw;" type="text" name="" required placeholder="House ID" autocomplete="on" pattern="[A-Za-z0-9]">
 		<input class="input_style" style="	margin-top: 14.5vw;" type="password" name="" required placeholder="Password" autocomplete="on" pattern="[A-Za-z0-9] {6,12}">
 		<input class="input_style" style="	margin-top: 16.5vw;" type="password" name="" required placeholder="Write password again" autocomplete="on" pattern="[A-Za-z0-9] {6,12}">
-		<input class="register" type="image" src="join_page/images/Untitled78-2-2.png" alt="Register">
+        <input class="register" type="image"
+               src="/resources/join_page/images/Untitled78-2-2.png"
+               alt="Register">
 		<div class="circle" style="top: 0.9vw;"></div>
 		<div class="circle" style="top: 2.9vw;"></div>
 		<div class="circle" style="top: 6.9vw;"></div>

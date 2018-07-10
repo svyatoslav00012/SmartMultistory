@@ -1,13 +1,15 @@
-package ua.com.smartmultistory.controller;
+package ua.com.smartmultistory.controller.entityController;
 
-import ua.com.smartmultistory.exception.ResourceNotFoundException;
-import ua.com.smartmultistory.model.Role;
-import ua.com.smartmultistory.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ua.com.smartmultistory.enumeration.RoleName;
+import ua.com.smartmultistory.exception.ResourceNotFoundException;
+import ua.com.smartmultistory.model.Role;
+import ua.com.smartmultistory.repository.RoleRepository;
 
 import javax.validation.Valid;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -17,9 +19,14 @@ public class RoleController {
 	@Autowired
 	RoleRepository roleRepository;
 
-	@GetMapping("/role")
+	@GetMapping("/roles")
 	public List<Role> getAllRoles() {
 		return roleRepository.findAll();
+	}
+
+	@GetMapping("/roles/val")
+	public List<RoleName> getRoleValues() {
+		return Arrays.asList(RoleName.values());
 	}
 
 	@PostMapping("/role")
@@ -40,9 +47,7 @@ public class RoleController {
 		Role role = roleRepository.findById(roleId)
 				.orElseThrow(() -> new ResourceNotFoundException("Role", "id", roleId));
 
-		role.setName(roleDetails.getName());
-		role.setPriority(roleDetails.getPriority());
-		role.setUsers(roleDetails.getUsers());
+		roleDetails.setId(role.getId());
 
 		Role updatedRole = roleRepository.save(role);
 		return updatedRole;

@@ -1,11 +1,11 @@
-package ua.com.smartmultistory.controller;
+package ua.com.smartmultistory.controller.entityController;
 
-import ua.com.smartmultistory.exception.ResourceNotFoundException;
-import ua.com.smartmultistory.model.User;
-import ua.com.smartmultistory.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ua.com.smartmultistory.exception.ResourceNotFoundException;
+import ua.com.smartmultistory.model.User;
+import ua.com.smartmultistory.repository.UserRepository;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -40,14 +40,7 @@ public class UserController {
 		User user = userRepository.findById(userId)
 				.orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
 
-		user.setEmail(userDetails.getEmail());
-		user.setFirst_name(userDetails.getFirst_name());
-		user.setMiddle_name(userDetails.getMiddle_name());
-		user.setLast_name(userDetails.getLast_name());
-		user.setFlat(userDetails.getFlat());
-		user.setRole(userDetails.getRole());
-		user.setNumber(userDetails.getNumber());
-		user.setPassword(userDetails.getPassword());
+		user.update(userDetails);
 
 		User updatedUser = userRepository.save(user);
 		return updatedUser;

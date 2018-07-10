@@ -6,8 +6,8 @@
 <head>
 	<meta charset="UTF-8">
 
-	<link rel="stylesheet"  href="home_page/styles/home.css">
-	<link rel="stylesheet"  href="home_page/styles/func_border.css">
+    <link rel="stylesheet" href="/resources/home_page/styles/home.css">
+    <link rel="stylesheet" href="/resources/home_page/styles/func_border.css">
 	
 
 	<title>HomePage</title>

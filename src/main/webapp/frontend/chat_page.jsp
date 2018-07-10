@@ -6,8 +6,10 @@
 <head>
 	<meta charset="UTF-8">
 
-	<link rel="stylesheet"  href="chat_page/styles/template_chat_page.css">
-	<link rel="stylesheet"  href="chat_page/styles/blocks_chat_page.css">
+    <link rel="stylesheet"
+          href="/resources/chat_page/styles/template_chat_page.css">
+    <link rel="stylesheet"
+          href="/resources/chat_page/styles/blocks_chat_page.css">
 
 
 	<title>ChatBoard</title>
@@ -62,17 +64,17 @@ of his contact information ( email, phone number, social network page etc.)">
 			<div class="one"></div>
 
 			<div class="two block_for_emblem">
-				<a href="notice_page"></a>
+                <a href="notice"></a>
 			</div>
 			
 			<div class="tree block_for_emblem">
-				<a href="tracking_page"></a>
+                <a href="tracking"></a>
 			</div>
 			<div class="four block_for_emblem">
-				<a href="counters_page"></a>
+                <a href="counters"></a>
 			</div>
 			<div class="five block_for_emblem">
-				<a href="brief_page"></a>
+                <a href="brief"></a>
 			</div>
 
 	</div>
@@ -87,14 +89,14 @@ of his contact information ( email, phone number, social network page etc.)">
 				<div class="under_home">
 						<div class="icone_home"></div>
 						<div class="home">
-							<a href="home_page"><font>HOME</font></a>
+                            <a href="home><font>HOME</font></a>
 						</div>
 					</div>
 																		
-					<div class="under_logout">
+					<div class=" under_logout">
 						<div class="icone_logout"></div>
 						<div class="logout">
-							<a href="presentation_page"><font>LOG OUT</font></a>
+                            <a href="presentation><font>LOG OUT</font></a>
 						</div>
 					</div>
 

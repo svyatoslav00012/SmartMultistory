@@ -7,8 +7,9 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="notice_page/styles/template_notice_page.css">
-    <link rel="stylesheet" href="notice_page/styles/blocks.css">
+    <link rel="stylesheet"
+          href="/resources/notice_page/styles/template_notice_page.css">
+    <link rel="stylesheet" href="/resources/notice_page/styles/blocks.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>NoticeBoard</title>
@@ -61,6 +62,7 @@ of his contact information ( email, phone number, social network page etc.)">
 
     function addNote() {
 
+        console.log("add note")
         var note = {};
 
         note.topic = $('#modalTopic').val();
@@ -208,17 +210,17 @@ of his contact information ( email, phone number, social network page etc.)">
 
 
     <div class="one block_for_emblem">
-        <a href="chat_page"></a>
+        <a href="chat"></a>
     </div>
     <div class="two"></div>
     <div class="tree block_for_emblem">
-        <a href="tracking_page"></a>
+        <a href="tracking"></a>
     </div>
     <div class="four block_for_emblem">
-        <a href="counters_page"></a>
+        <a href="counters"></a>
     </div>
     <div class="five block_for_emblem">
-        <a href="brief_page"></a>
+        <a href="brief"></a>
     </div>
 
 </div>
