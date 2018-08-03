@@ -16,7 +16,7 @@ import javax.validation.constraints.Size;
 @JsonIgnoreProperties(allowGetters = true)
 @Validated
 @Data
-public class User {
+public class Resident {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -39,10 +39,10 @@ public class User {
 	@Column(name = "note")
 	private String note;
 
-	public void update(@Valid User userDetails) {
-		this.name = userDetails.name;
-		this.number = userDetails.number;
-		this.flat = userDetails.flat;
-		this.note = userDetails.note;
-	}
+    public void update(@Valid Resident residentDetails) {
+        this.name = residentDetails.name;
+        this.number = residentDetails.number;
+        this.flat = residentDetails.flat;
+        this.note = residentDetails.note;
+    }
 }

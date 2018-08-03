@@ -2,7 +2,6 @@ package ua.com.smartmultistory.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.security.core.CredentialsContainer;
@@ -15,6 +14,7 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 @Entity
 @Table(name = "account")
@@ -24,81 +24,96 @@ import java.util.Collections;
 @Data
 public class Account implements Serializable, CredentialsContainer, AccountDetails {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+    private static final long serialVersionUID = 1L;
 
-	@Column(name = "email")
-	@NotNull
-	@Size(min = 3, max = 64)
-	private String email;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-	@Column(name = "password")
-	@NotNull
-	@Size(min = 8, max = 64)
-	private String password;
+    @Column(name = "email")
+    @NotNull
+    @Size(min = 3, max = 64)
+    private String email;
 
-	@ManyToOne
-	@JsonBackReference
-	@JoinColumn(name = "role_id")
-	private Role role;
+    @Column(name = "password")
+    @NotNull
+    @Size(min = 8, max = 64)
+    private String password;
 
-	@OneToOne
-	@JsonManagedReference
-	@JoinColumn(name = "id")
-	private Flat flat;
+    @ManyToOne
+    @JsonBackReference
+    @JoinColumn(name = "role_id")
+    private Role role;
 
-	@Column(name = "nonExpired")
-	private boolean nonExpired;
+    @OneToOne(mappedBy = "account")
+    private Flat flat;
 
-	@Column(name = "nonLocked")
-	private boolean nonLocked;
+    @ManyToOne
+    @JsonBackReference
+    @JoinColumn(name = "house_id")
+    private House house;
 
-	@Column(name = "credentialsNonExpired")
-	private boolean credentialsNonExpired;
+    @OneToMany(mappedBy = "flat")
+    private List<Note> notes;
 
-	@Column(name = "enabled")
-	private boolean enabled;
+    @Column(name = "nonExpired")
+    private boolean nonExpired;
 
-	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return Collections.singleton(role);
-	}
+    @Column(name = "nonLocked")
+    private boolean nonLocked;
 
-	@Override
-	public String getPassword() {
-		return password;
-	}
+    @Column(name = "credentialsNonExpired")
+    private boolean credentialsNonExpired;
 
-	@Override
-	public String getUsername() {
-		return email;
-	}
+    @Column(name = "enabled")
+    private boolean enabled;
 
-	@Override
-	public boolean isAccountNonExpired() {
-		return nonExpired;
-	}
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Collections.singleton(role);
+    }
 
-	@Override
-	public boolean isAccountNonLocked() {
-		return nonLocked;
-	}
+    @Override
+    public String getPassword() {
+        return password;
+    }
 
-	@Override
-	public boolean isCredentialsNonExpired() {
-		return credentialsNonExpired;
-	}
+    @Override
+    public String getUsername() {
+        return email;
+    }
 
-	@Override
-	public boolean isEnabled() {
-		return enabled;
-	}
+    @Override
+    public boolean isAccountNonExpired() {
+        return nonExpired;
+    }
 
-	@Override
-	public void eraseCredentials() {
-		credentialsNonExpired = false;
-	}
+    @Override
+    public boolean isAccountNonLocked() {
+        return nonLocked;
+    }
 
-	private static final long serialVersionUID = 1L;
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return credentialsNonExpired;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    @Override
+    public void eraseCredentials() {
+        credentialsNonExpired = false;
+    }
+
+    public String toString() {
+        return id + " " + email;
+    }
+
+    public void updateFromDetails(Account accountDetails) {
+        System.err.println("Account updateFromDetails(Account accountDetails) DOES NOTHING");
+        new Exception().printStackTrace();
+    }
 }

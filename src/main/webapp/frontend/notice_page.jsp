@@ -13,11 +13,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>NoticeBoard</title>
-    <meta name="description" content="Every user will have a page, visible to all neighbors, which will contain a short list
+    <meta name="description" content="Every flatman will have a page, visible to all neighbors, which will contain a short list
 of his contact information ( email, phone number, social network page etc.)">
     <meta name="keywords"
           content="Smart house, Smart home, Smart house systems, Smart home systems, Comfort house, House management, House monitoring, Apartment control,Apartment monitoring">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
 </head>
 
 
@@ -45,7 +47,7 @@ of his contact information ( email, phone number, social network page etc.)">
         console.log("update");
         $(".scroll_block").empty();
 
-        $.get("/api/notes", function (notes) {
+        $.get("/api/notes/house", function (notes) {
 
             $.each(notes, function (index, note) {
                 $("#scrl").append(
@@ -62,7 +64,7 @@ of his contact information ( email, phone number, social network page etc.)">
 
     function addNote() {
 
-        console.log("add note")
+        console.log("add note");
         var note = {};
 
         note.topic = $('#modalTopic').val();
@@ -75,9 +77,8 @@ of his contact information ( email, phone number, social network page etc.)">
             data: JSON.stringify(note)
         });
 
-        showHideModal(false);
-        updateNotes();
-        window.location.href = "";
+        //  showHideModal(false);
+        //   window.location.href = "";
         updateNotes();
     }
 
@@ -101,7 +102,14 @@ of his contact information ( email, phone number, social network page etc.)">
         });
     }
 
-    $(document).ready(updateNotes());
+    $(document).ready(function () {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_csrf"]').attr('content')
+            }
+        });
+        updateNotes();
+    });
 
     //        $("button").click(function () {
     //            $.get("demo_test.asp", function (data, status) {
@@ -232,14 +240,14 @@ of his contact information ( email, phone number, social network page etc.)">
     <div class="under_home">
         <div class="icone_home"></div>
         <div class="home">
-            <a href="home_page"><font>HOME</font></a>
+            <a href="home"><font>HOME</font></a>
         </div>
     </div>
 
     <div class="under_logout">
         <div class="icone_logout"></div>
         <div class="logout">
-            <a href="presentation_page"><font>LOG OUT</font></a>
+            <a href="logout"><font>LOG OUT</font></a>
         </div>
     </div>
 

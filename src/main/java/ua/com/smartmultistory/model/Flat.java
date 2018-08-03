@@ -7,6 +7,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
@@ -19,30 +20,33 @@ import java.util.List;
 @Data
 public class Flat {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-	@OneToMany(mappedBy = "flat")
-	private List<User> users;
+    @OneToMany(mappedBy = "flat")
+    private List<Resident> residents;
 
-	@OneToMany(mappedBy = "flat")
-	private List<Note> notes;
+    @NotNull
+    @Size(max = 14, min = 1)
+    @Column(name = "number")
+    private String number;
 
-	@NotNull
-	@Size(max = 14, min = 1)
-	@Column(name = "number")
-	private String number;
+    @ManyToOne
+    @JsonBackReference
+    @JoinColumn(name = "house_id")
+    private House house;
 
-	@ManyToOne
-	@JsonBackReference
-	@JoinColumn(name = "house_id")
-	private House house;
+    @OneToOne
+    @JsonBackReference
+    @JoinColumn(name = "account_id")
+    private Account account;
 
-	@NotNull
-	@OneToOne
-	@JsonBackReference
-	@JoinColumn(name = "id")
-	private Flat account;
+    public String toString() {
+        return "flat#" + id + "\n" + "House : " + house;
+    }
 
+    public void updateFromDetails(@Valid Flat flatDetails) {
+        this.number = flatDetails.number;
+    }
 }

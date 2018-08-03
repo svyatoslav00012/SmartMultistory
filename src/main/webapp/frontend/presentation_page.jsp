@@ -271,7 +271,7 @@
 
             <div class="button"><a
                     href="howToJoin"><span>Join us in one click</span></a></div>
-            <div class="home"><a href="login"><span>Home</span></a></div>
+            <div class="home"><a href="home"><span>Home</span></a></div>
             <div class="connect"><a href="??????"><span>Contact us</span></a>
             </div>
 			<div class="help"><a href="??????"><span>Help</span></a></div> 

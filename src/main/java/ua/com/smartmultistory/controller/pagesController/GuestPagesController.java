@@ -7,8 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.Date;
-
 @Controller
 public class GuestPagesController {
 
@@ -35,30 +33,12 @@ public class GuestPagesController {
 		return "entry_page";
 	}
 
-//	@PostMapping("/login")
-//	public String login(HttpServletRequest request, HttpServletResponse response, @ModelAttribute AccountLoginForm loginForm,
-//						BindingResult result) throws ServletException {
-//		try {
-//			request.login(loginForm.getEmail(), loginForm.getPassword());
-//			SavedRequest savedRequest = requestCache.getRequest(request, response);
-//			if (savedRequest != null) {
-//				return "redirect:" + savedRequest.getRedirectUrl();
-//			} else {
-//				return "redirect:/";
-//			}
 //
-//		} catch (ServletException authenticationFailed) {
-//			result.rejectValue(null, "authentication.failed");
-//			return "login";
-//		}
-//
+//	@GetMapping("/error")
+//	public String getError(Model model) {
+//		model.addAttribute("time", new Date(System.currentTimeMillis()));
+//		model.addAttribute("error", "error...");
+//		model.addAttribute("message", "message...");
+//		return "error_page";
 //	}
-
-	@GetMapping("/error")
-	public String getError(Model model) {
-		model.addAttribute("time", new Date(System.currentTimeMillis()));
-		model.addAttribute("error", "error...");
-		model.addAttribute("message", "message...");
-		return "error_page";
-	}
 }

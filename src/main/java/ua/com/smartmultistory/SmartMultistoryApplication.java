@@ -12,7 +12,7 @@ public class SmartMultistoryApplication {
 	}
 
 	private static String e(String s) {
-		return new BCryptPasswordEncoder().encode("admin");
-	}
+        return new BCryptPasswordEncoder().encode(s);
+    }
 
 }

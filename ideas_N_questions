@@ -1,0 +1,8 @@
+1) Should merge AccountService and AccountDetailsService?
+2) Services, why should pass through?
+3) Do we need services at all?
+
+
+===== FRONTEND =====
+    -make signIn and join on the top of presentation page
+    -make all smartmultistory headers link to smth(home, presentation...)

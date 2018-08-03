@@ -19,20 +19,12 @@ import ua.com.smartmultistory.services.interfaces.AccountDetailsService;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Autowired
+    AccountDetailsService ads;
+
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
-//		return new PasswordEncoder() {
-//			@Override
-//			public String encode(CharSequence charSequence) {
-//				return String.valueOf(charSequence);
-//			}
-//
-//			@Override
-//			public boolean matches(CharSequence charSequence, String s) {
-//				return charSequence.equals(s);
-//			}
-//		};
 	}
 
 	@Bean
@@ -57,12 +49,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	@Autowired
-	AccountDetailsService ads;
-
-	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder builder) throws Exception {
 		builder.userDetailsService(ads);
-//		builder.inMemoryAuthentication().withUser("user").password("password").roles("USER");
 	}
 
 }

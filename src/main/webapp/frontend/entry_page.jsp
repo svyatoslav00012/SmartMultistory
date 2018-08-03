@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>EnterHome</title>
-    <meta name="description" content="Every user will have a page, visible to all neighbors, which will contain a short list
+    <meta name="description" content="Every flatman will have a page, visible to all neighbors, which will contain a short list
 of his contact information ( email, phone number, social network page etc.)">
     <meta name="keywords"
           content="Smart house, Smart home, Smart house systems, Smart home systems, Comfort house, House management, House monitoring, Apartment control,Apartment monitoring">

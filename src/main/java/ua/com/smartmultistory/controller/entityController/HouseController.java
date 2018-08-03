@@ -3,9 +3,8 @@ package ua.com.smartmultistory.controller.entityController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ua.com.smartmultistory.exception.ResourceNotFoundException;
 import ua.com.smartmultistory.model.House;
-import ua.com.smartmultistory.repository.HouseRepository;
+import ua.com.smartmultistory.services.interfaces.HouseService;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -15,45 +14,32 @@ import java.util.List;
 public class HouseController {
 
 	@Autowired
-	HouseRepository houseRepository;
+    HouseService houseService;
 
-	@GetMapping("/house")
-	public List<House> getAllHouses() {
-		return houseRepository.findAll();
-	}
+    @GetMapping("/houses")
+    public List<House> getAllHouses() {
+        return houseService.findAll();
+    }
 
 	@PostMapping("/house")
 	public House createHouse(@Valid @RequestBody House house) {
-		return houseRepository.save(house);
-	}
+        return houseService.create(house);
+    }
 
 	@GetMapping("/house/{id}")
 	public House getHouseById(@PathVariable(value = "id") Long houseId) {
-		return houseRepository.findById(houseId)
-				.orElseThrow(() -> new ResourceNotFoundException("House", "id", houseId));
-	}
+        return houseService.findById(houseId);
+    }
 
 	@PutMapping("/house/{id}")
 	public House updateHouse(@PathVariable(value = "id") Long houseId,
 							 @Valid @RequestBody House houseDetails) {
-
-		House house = houseRepository.findById(houseId)
-				.orElseThrow(() -> new ResourceNotFoundException("House", "id", houseId));
-
-		house.setAdress(houseDetails.getAdress());
-		house.setFlats(houseDetails.getFlats());
-
-		House updatedHouse = houseRepository.save(house);
-		return updatedHouse;
-	}
+        return houseService.update(houseId, houseDetails);
+    }
 
 	@DeleteMapping("/house/{id}")
 	public ResponseEntity<?> deleteHouse(@PathVariable(value = "id") Long houseId) {
-		House house = houseRepository.findById(houseId)
-				.orElseThrow(() -> new ResourceNotFoundException("House", "id", houseId));
-
-		houseRepository.delete(house);
-
-		return ResponseEntity.ok().build();
-	}
+        houseService.delete(houseId);
+        return ResponseEntity.ok().build();
+    }
 }

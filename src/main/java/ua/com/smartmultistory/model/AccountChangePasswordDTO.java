@@ -8,7 +8,7 @@ import lombok.Data;
  */
 
 @Data
-public class AccountChangePasswordForm {
-	private String oldPassword;
-	private String newPassword;
+public class AccountChangePasswordDTO {
+    private String oldPassword;
+    private String newPassword;
 }

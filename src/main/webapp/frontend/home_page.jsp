@@ -11,7 +11,7 @@
 	
 
 	<title>HomePage</title>
-	<meta name="description" content="Every user will have a page, visible to all neighbors, which will contain a short list
+    <meta name="description" content="Every flatman will have a page, visible to all neighbors, which will contain a short list
 of his contact information ( email, phone number, social network page etc.)">
 	<meta name="keywords" content="Smart house, Smart home, Smart house systems, Smart home systems, Comfort house, House management, House monitoring, Apartment control,Apartment monitoring">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,19 +58,19 @@ of his contact information ( email, phone number, social network page etc.)">
 
 <div class="right_line">
 	<div class="appearance one">
-		<a href="chat_page"></a>
+        <a href="chat"></a>
 	</div>
 	<div class="appearance two">
-		<a href="notice_page"></a>
+        <a href="notice"></a>
 	</div>
 	<div class="appearance three">
-		<a href="tracking_page"></a>
+        <a href="tracking"></a>
 	</div>
 	<div class="appearance four">
-		<a href="counters_page"></a>
+        <a href="counters"></a>
 	</div>
 	<div class="appearance five">
-		<a href="brief_page"></a>
+        <a href="brief"></a>
 	</div>
 </div>
 

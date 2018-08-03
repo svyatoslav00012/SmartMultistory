@@ -8,6 +8,7 @@ import org.springframework.validation.annotation.Validated;
 import ua.com.smartmultistory.enumeration.RoleName;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class Role implements GrantedAuthority {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+    private long id;
 
 	@Override
 	public String getAuthority() {
@@ -42,4 +43,8 @@ public class Role implements GrantedAuthority {
 	public void setName(String name) {
 		this.name = RoleName.valueOf(name);
 	}
+
+    public void updateFromDetails(@Valid Role roleDetails) {
+        this.name = roleDetails.name;
+    }
 }

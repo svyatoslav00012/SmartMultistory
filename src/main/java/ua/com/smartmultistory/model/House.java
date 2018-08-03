@@ -7,6 +7,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
@@ -18,36 +19,32 @@ import java.util.List;
 @Data
 public class House {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-	@JsonManagedReference
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "house", cascade = CascadeType.PERSIST)
-	private List<Flat> flats;
+    @JsonManagedReference
+    @OneToMany(mappedBy = "house")
+    private List<Flat> flats;
 
-	@Column(name = "adress")
-	@NotNull
-	private String adress;
+    @Column(name = "address")
+    @NotNull
+    private String address;
 
-	@JsonManagedReference
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "flat", cascade = CascadeType.PERSIST)
-	private List<Note> notes;
+    @JsonManagedReference
+    @OneToMany(mappedBy = "house")
+    private List<Account> accounts;
+
+    @ManyToMany(mappedBy = "houses")
+    private List<Note> notes;
+
+    public void updateFromDetails(@Valid House houseDetails) {
+        this.address = houseDetails.address;
+    }
+
+    @Override
+    public String toString() {
+        return id + " " + address + "\n";
+    }
 
 }
-
-
-/*
-
-some changes to be able to save nested objects like
-
-{
-	"adress": "someAdress",
-	"flats": [
-		{
-		"number": "123a"
-		}
-	]
-}
-
- */

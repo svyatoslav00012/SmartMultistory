@@ -5,15 +5,14 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import ua.com.smartmultistory.exception.ResourceNotFoundException;
 import ua.com.smartmultistory.model.Account;
-import ua.com.smartmultistory.model.AccountChangePasswordForm;
+import ua.com.smartmultistory.model.AccountChangePasswordDTO;
 import ua.com.smartmultistory.repository.AccountRepository;
-import ua.com.smartmultistory.services.interfaces.AccountsService;
+import ua.com.smartmultistory.services.interfaces.AccountService;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-public class AccountServiceImpl implements AccountsService {
+public class AccountServiceImpl implements AccountService {
 
 	@Autowired
 	private AccountRepository repository;
@@ -22,14 +21,15 @@ public class AccountServiceImpl implements AccountsService {
 	private PasswordEncoder encoder;
 
 	@Override
-	public Optional<Account> loadByEmail(String email) {
-		List<Account> allAccounts = repository.findAll();
+    public Account loadByEmail(String email) {
+        List<Account> allAccounts = repository.findAll();
 
 		for (Account a : allAccounts)
-			if (a.getUsername().equals(email))
-				return Optional.ofNullable(a);
-		return Optional.empty();
-	}
+            if (a.getEmail().equals(email))
+                return a;
+
+        return null;
+    }
 
 	@Override
 	public Account loadById(Long id) {
@@ -38,16 +38,22 @@ public class AccountServiceImpl implements AccountsService {
 	}
 
 	@Override
-	public Account save(Account account) {
-		account.setPassword(encoder.encode(account.getPassword()));
-		return repository.save(account);
-	}
+    public Account create(Account account) {
+        account.setPassword(encoder.encode(account.getPassword()));
+        Account updated = repository.save(account);
+        return updated;
+    }
 
 	@Override
 	public Account update(Long id, Account accountDetails) {
-		accountDetails.setId(id);
-		return repository.save(accountDetails);
-	}
+        Account account = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Account", "id", id));
+
+        account.updateFromDetails(accountDetails);
+        Account updatedAccount = repository.save(account);
+
+        return updatedAccount;
+    }
 
 	@Override
 	public List<Account> getAll() {
@@ -55,14 +61,17 @@ public class AccountServiceImpl implements AccountsService {
 	}
 
 	@Override
-	public Optional<Account> updatePassword(Long id, AccountChangePasswordForm passwords) {
-		Account account = repository.findById(id)
-				.orElseThrow(() -> new ResourceNotFoundException("Account", "id", id));
+    public Account updatePassword(Long id, AccountChangePasswordDTO passwords) {
+        Account account = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Account", "id", id));
+
 		if (encoder.matches(passwords.getOldPassword(), account.getPassword())) {
-			account.setPassword(encoder.encode(passwords.getNewPassword()));
-			return Optional.ofNullable(repository.save(account));
-		}
-		return Optional.empty();
-	}
+            String newEncodedPassword = encoder.encode(passwords.getNewPassword());
+            account.setPassword(newEncodedPassword);
+            Account accountWithUpdatedPassword = repository.save(account);
+            return accountWithUpdatedPassword;
+        }
+        return null;
+    }
 
 }

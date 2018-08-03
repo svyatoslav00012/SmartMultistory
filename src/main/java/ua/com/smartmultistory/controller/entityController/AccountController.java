@@ -3,10 +3,9 @@ package ua.com.smartmultistory.controller.entityController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ua.com.smartmultistory.model.Account;
-import ua.com.smartmultistory.model.AccountChangePasswordForm;
-import ua.com.smartmultistory.services.interfaces.AccountsService;
+import ua.com.smartmultistory.model.AccountChangePasswordDTO;
+import ua.com.smartmultistory.services.interfaces.AccountService;
 
-import javax.security.auth.login.AccountNotFoundException;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -16,7 +15,7 @@ public class AccountController {
 
 
 	@Autowired
-	private AccountsService service;
+    private AccountService service;
 
 	@GetMapping("/accounts")
 	public List<Account> getAllAccounts() {
@@ -30,8 +29,8 @@ public class AccountController {
 
 	@PostMapping("/account")
 	public Account addAccount(@Valid @RequestBody Account account) {
-		return service.save(account);
-	}
+        return service.create(account);
+    }
 
 	@PutMapping("/account/{id}")
 	public Account update(@PathVariable(value = "id") Long id, Account accountDetails) {
@@ -39,8 +38,8 @@ public class AccountController {
 	}
 
 	@PutMapping("/account/updatePassword/{id}")
-	public Account updatePassword(@PathVariable(value = "id") Long id, AccountChangePasswordForm passwords) throws AccountNotFoundException {
-		return service.updatePassword(id, passwords).orElseThrow(RuntimeException::new);
-	}
+    public Account updatePassword(@PathVariable(value = "id") Long id, AccountChangePasswordDTO passwords) {
+        return service.updatePassword(id, passwords);
+    }
 
 }

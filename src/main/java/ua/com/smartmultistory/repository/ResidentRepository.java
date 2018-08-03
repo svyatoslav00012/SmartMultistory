@@ -1,9 +1,9 @@
 package ua.com.smartmultistory.repository;
 
-import ua.com.smartmultistory.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import ua.com.smartmultistory.model.Resident;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long>{
+public interface ResidentRepository extends JpaRepository<Resident, Long> {
 }

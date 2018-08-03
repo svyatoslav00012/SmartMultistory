@@ -13,7 +13,7 @@
 
 
 	<title>TrackinBoard</title>
-	<meta name="description" content="Every user will have a page, visible to all neighbors, which will contain a short list
+    <meta name="description" content="Every flatman will have a page, visible to all neighbors, which will contain a short list
 of his contact information ( email, phone number, social network page etc.)">
 	<meta name="keywords" content="Smart house, Smart home, Smart house systems, Smart home systems, Comfort house, House management, House monitoring, Apartment control,Apartment monitoring">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -98,7 +98,7 @@ of his contact information ( email, phone number, social network page etc.)">
 					<div class="under_logout">
 						<div class="icone_logout"></div>
 						<div class="logout">
-                            <a href="presentation"><font>LOG OUT</font></a>
+                            <a href="logout"><font>LOG OUT</font></a>
 						</div>
 					</div>
 

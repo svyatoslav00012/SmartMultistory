@@ -4,9 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ua.com.smartmultistory.enumeration.RoleName;
-import ua.com.smartmultistory.exception.ResourceNotFoundException;
 import ua.com.smartmultistory.model.Role;
-import ua.com.smartmultistory.repository.RoleRepository;
+import ua.com.smartmultistory.services.interfaces.RoleService;
 
 import javax.validation.Valid;
 import java.util.Arrays;
@@ -17,12 +16,12 @@ import java.util.List;
 public class RoleController {
 
 	@Autowired
-	RoleRepository roleRepository;
+    RoleService roleService;
 
 	@GetMapping("/roles")
 	public List<Role> getAllRoles() {
-		return roleRepository.findAll();
-	}
+        return roleService.findAll();
+    }
 
 	@GetMapping("/roles/val")
 	public List<RoleName> getRoleValues() {
@@ -31,35 +30,23 @@ public class RoleController {
 
 	@PostMapping("/role")
 	public Role createRole(@Valid @RequestBody Role role) {
-		return roleRepository.save(role);
-	}
+        return roleService.create(role);
+    }
 
 	@GetMapping("/role/{id}")
 	public Role getRoleById(@PathVariable(value = "id") Long roleId) {
-		return roleRepository.findById(roleId)
-				.orElseThrow(() -> new ResourceNotFoundException("Role", "id", roleId));
-	}
+        return roleService.findById(roleId);
+    }
 
 	@PutMapping("/role/{id}")
 	public Role updateRole(@PathVariable(value = "id") Long roleId,
 						   @Valid @RequestBody Role roleDetails) {
-
-		Role role = roleRepository.findById(roleId)
-				.orElseThrow(() -> new ResourceNotFoundException("Role", "id", roleId));
-
-		roleDetails.setId(role.getId());
-
-		Role updatedRole = roleRepository.save(role);
-		return updatedRole;
-	}
+        return roleService.update(roleId, roleDetails);
+    }
 
 	@DeleteMapping("/role/{id}")
 	public ResponseEntity<?> deleteRole(@PathVariable(value = "id") Long roleId) {
-		Role Role = roleRepository.findById(roleId)
-				.orElseThrow(() -> new ResourceNotFoundException("Role", "id", roleId));
-
-		roleRepository.delete(Role);
-
-		return ResponseEntity.ok().build();
-	}
+        roleService.delete(roleId);
+        return ResponseEntity.ok().build();
+    }
 }
